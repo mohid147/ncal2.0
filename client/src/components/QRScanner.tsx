@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5QrcodeScanner, Html5QrcodeScanType } from "html5-qrcode";
 import { Card } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -23,7 +23,7 @@ export default function QRScanner({ onResult, onError }: QRScannerProps) {
             qrbox: { width: 250, height: 250 },
             aspectRatio: 1.0,
             showTorchButtonIfSupported: true,
-            supportedScanTypes: ["QR_CODE"]
+            supportedScanTypes: [Html5QrcodeScanType.QR_CODE]
           },
           false
         );
